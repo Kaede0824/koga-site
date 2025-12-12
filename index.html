@@ -2,43 +2,128 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <title>古閑楓のWebページ</title>
-    <meta name="description" content="Personal landing page hosted on GitHub Pages." />
+    <title>古閑楓（Koga Kaede） | 自己紹介</title>
+    <meta
+      name="description"
+      content="慶應義塾大学理工学部システムデザイン工学科・古閑楓（Koga Kaede）の自己紹介ページ"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
+      :root {
+        color-scheme: dark;
+        font-family: "Inter", "Helvetica Neue", system-ui, sans-serif;
+        background-color: #05060a;
+        color: #eef2ff;
+      }
       body {
-        font-family: "Helvetica Neue", Arial, sans-serif;
         margin: 0;
         min-height: 100vh;
+        background: radial-gradient(circle at top, #1f2937, #05060a 65%);
         display: flex;
-        align-items: center;
         justify-content: center;
-        background: #111;
-        color: #f5f5f5;
+        padding: 2rem;
       }
-      main {
-        text-align: center;
+      .page {
+        width: min(960px, 100%);
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
       }
-      h1 {
-        font-size: 2.5rem;
-        margin: 0 0 0.25em;
+      header {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 2rem 2.5rem;
+        box-shadow: 0 25px 40px rgba(5, 6, 10, 0.6);
       }
-      p {
+      header h1 {
+        font-size: clamp(2rem, 4vw, 2.75rem);
         margin: 0;
-        color: #c0c0c0;
+        letter-spacing: 0.04em;
       }
-      a {
+      header p {
+        margin: 0.6rem 0 0;
+        color: #a0aec0;
+      }
+      section {
+        background: rgba(15, 23, 42, 0.85);
+        border-radius: 18px;
+        padding: 1.75rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 10px 30px rgba(2, 6, 23, 0.8);
+      }
+      section h2 {
+        margin-top: 0;
+        font-size: 1.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 0.5rem;
+      }
+      .grid {
+        display: grid;
+        gap: 1.25rem;
+      }
+      .skill-chip {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.45rem 0.9rem;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.04);
+        font-size: 0.95rem;
+      }
+      .contact a {
         color: #7dd3fc;
+        text-decoration: none;
+      }
+      .contact a:hover {
+        text-decoration: underline;
+      }
+      @media (max-width: 640px) {
+        body {
+          padding: 1rem;
+        }
+        header,
+        section {
+          padding: 1.25rem;
+        }
       }
     </style>
   </head>
   <body>
-    <main>
-      <h1>Welcome to KOGA's Site</h1>
-      <p>Simple HTML page served via GitHub Pages.</p>
-      <p>
-        <a href="https://github.com/koga" target="_blank" rel="noreferrer">Visit my GitHub</a>
-      </p>
-    </main>
+    <div class="page">
+      <header>
+        <h1>古閑楓（Koga Kaede）</h1>
+        <p>慶應義塾大学理工学部システムデザイン工学科 / 時系列解析・VR・コンピュータサイエンスに取り組む学び手</p>
+      </header>
+
+      <section>
+        <h2>Profile</h2>
+        <p>
+          慶應義塾大学理工学部のシステムデザイン工学科で、データの流れと空間表現の両面からソリューションをデザインしています。
+          情報と体験が交差する領域に興味を持ち、理論と実装のバランスを重視して日々プロジェクトに取り組んでいます。
+        </p>
+      </section>
+
+      <section>
+        <h2>Specialties</h2>
+        <div class="grid">
+          <p>以下のテーマを中心に知見を深めています。</p>
+          <div class="skill-chip">時系列解析</div>
+          <div class="skill-chip">VR / 3D体験設計</div>
+          <div class="skill-chip">コンピュータサイエンス</div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <h2>Contact</h2>
+        <p>お気軽にご連絡ください。</p>
+        <p><a href="mailto:koga824@keio.jp">koga824@keio.jp</a></p>
+      </section>
+
+      <section>
+        <h2>Favorites</h2>
+        <p>日常に彩りを添えるものとして音楽を大切にしており、特にtoeの繊細なリズムと展開に魅力を感じています。</p>
+      </section>
+    </div>
   </body>
 </html>
